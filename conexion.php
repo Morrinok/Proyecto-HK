@@ -12,3 +12,5 @@
         die("Conexion fallida: ". $conn->connect_error);
     }
 ?>
+
+<!-- Comentario de sebastian -->
