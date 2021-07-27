@@ -1,7 +1,7 @@
 <?php
     include "conexion.php";
     $id = $_GET['id'];
-    $sql = "SELECT * FROM  lab4.objetos WHERE id =" . $id;
+    $sql = "SELECT * FROM  laravel.recetas WHERE id =" . $id;
     $result = $conn->query($sql);
     echo "<br>";
     $row = $result->fetch_assoc();
