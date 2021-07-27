@@ -1,3 +1,12 @@
+<?php
+        include "conexion.php";
+
+        $sql = "SELECT * FROM  hellkitchen.recetas";
+        $result = $conn->query($sql);
+        
+        if($result->num_rows > 0){
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,54 +62,18 @@
   <!-- Sección con las categorías -->
   <div class="row" id="categorias" style="background-color: yellow;">
     <h1 class="text-center"> Recetas </h1>
+    <?php while($row = $result->fetch_assoc()){
+    ?>
     <div class="col-sm-2">
       <div class="thumbnail text-center">
-        <a href="/img/gallery/01.jpg">
-          <img src="./img/gallery/01.jpg" alt="Arrollado huaso">
-          <div class="caption">Arrollado huaso</div>
-        </a>
+        <!--<a href="/img/gallery/01.jpg">-->
+          <img src="<?php echo $row['imagen'] ?>" alt="<?php echo $row['nombre_receta'] ?>">
+          <div class="<?php echo $row['nombre_receta'] ?>"></div>
+        <!--</a>-->
       </div>
     </div>
-    <div class="col-sm-2">
-      <div class="thumbnail text-center">
-        <a href="/img/gallery/02.jpg">
-          <img src="./img/gallery/02.jpg" alt="Caldilo de congrio">
-          <div class="caption">Caldillo de congrio</div>
-        </a>
-      </div>
-    </div>
-    <div class="col-sm-2">
-      <div class="thumbnail text-center">
-        <a href="/img/gallery/03.jpg">
-          <img src="./img/gallery/03.jpg" alt="Carbonada">
-          <div class="caption">Carbonada</div>
-        </a>
-      </div>
-    </div>
-    <div class="col-sm-2">
-      <div class="thumbnail text-center">
-        <a href="/img/gallery/04.jpg">
-          <img src="./img/gallery/04.jpg" alt="Cazuela nogada">
-          <div class="caption">Cazuela nogada</div>
-        </a>
-      </div>
-    </div>
-    <div class="col-sm-2">
-      <div class="thumbnail text-center">
-        <a href="/img/gallery/05.jpg">
-          <img src="./img/gallery/05.jpg" alt="Chapalele">
-          <div class="caption">Chapalele</div>
-        </a>
-      </div>
-    </div>
-    <div class="col-sm-2">
-      <div class="thumbnail text-center">
-        <a href="/img/gallery/06.jpg">
-          <img src="./img/gallery/06.jpg" alt="Charqui de caballo">
-          <div class="caption">Charqui de caballo</div>
-        </a>
-      </div>
-    </div>
+    <?php } }
+    ?>
   </div>
   <!-- Sección de espacio blanco 2 -->
   <div style="height: 40px;"></div>
