@@ -60,19 +60,20 @@
 
 <div class="container">
   <!-- Sección con las categorías -->
-  <div class="row" id="categorias" style="background-color: yellow;">
+  <div class="row" id="categorias" style="background-color: black;">
     <h1 class="text-center"> Recetas </h1>
     <?php while($row = $result->fetch_assoc()){
     ?>
     <div class="col-sm-2">
       <div class="thumbnail text-center">
         <!--<a href="/img/gallery/01.jpg">-->
-          <img src="<?php echo $row['imagen'] ?>" alt="<?php echo $row['nombre_receta'] ?>">
-          <div class="<?php echo $row['nombre_receta'] ?>"></div>
+          <img class="img-responsive" src="<?php echo $row['imagen'] ?>" alt="<?php echo $row['nombre_receta'] ?>" >
+          <div class="caption"><?php echo $row['nombre_receta'] ?></div>
         <!--</a>-->
       </div>
     </div>
     <?php } }
+    
     ?>
   </div>
   <!-- Sección de espacio blanco 2 -->
@@ -84,7 +85,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title text-center">
-              <a data-toggle="collapse" href="#collapse1">Recetas más preparadas</a>
+              <a data-toggle="collapse" href="#collapse1" >Recetas más preparadas</a>
             </h4>
           </div>
           <div id="collapse1" class="panel-collapse collapse">
@@ -120,11 +121,17 @@
   <div class="row">
     <!-- Espacio en blanco -->
     <div class="col-md-12">
-      <h3>La destacada de esta semana es la receta...</h3>
-      <div class="well">
-        <h1>Cazuela nogada</h1>
-        <img src="./img/gallery/04.jpg" class="img-thumbnail" alt="Cazuela nogada">
-        <p>La cazuela no es un plato exclusivamente chileno, pero en el sector de El Almendral, en la provincia de Chacabuco y cercano a Los Andes, se prepara la Cazuela de Ave Nogada. Plato ingenioso y criaturero, para pasar males de amor o festejos muy largos, o bien, para reponer las energías después de un largo viaje.</p>
+      <?php
+
+          $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE destacada = 1";
+          $result = $conn->query($sql);
+          $row = $result->fetch_assoc();             
+      ?>
+      <h3>La receta destacada de esta semana es el plato: </h3>
+      <div class="well text-center">
+        <h2 class="text-center"><?php echo $row['nombre_receta'] ?></h1>
+        <img src="<?php echo $row['imagen'] ?>" class="img-thumbnail" alt="<?php echo $row['nombre_receta'] ?>">
+        <p><?php echo $row['preparacion'] ?></p>
       </div>
       
     </div>
