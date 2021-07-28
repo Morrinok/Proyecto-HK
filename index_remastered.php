@@ -97,6 +97,7 @@
               <li class="list-group-item"><?php echo $row['nombre_receta']?></li> <!-- Aquí van los items de recetas mejor puntuadas -->
               <?php }
               ?>
+              </a>
             </ul>
           </div>
         </div>
@@ -121,6 +122,7 @@
               <li class="list-group-item"><?php echo $row['nombre_receta']?></li> <!-- Aquí van las recetas más difíciles -->
               <?php }
               ?>
+              </a>
             </ul>
           </div>
         </div>
