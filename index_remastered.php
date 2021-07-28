@@ -112,7 +112,23 @@
       </div>
     </div>
   </div>
-
+  <!-- Sección de espacio blanco 2 -->
+  <div style="height: 26px;"></div>
+  <!-- Pie de página -->
+  <div class="container-fluid text-center" style="background-color: #f4f4f4;">
+    <div class="col-md-6">
+      <p>&copy; 2021 Hell's Kitchen. All rights reserved. Design by Grupo Hell's Kitchen</p>
+    </div>
+    <div class="col-md-2">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+    </div>
+    <div class="col-md-2">
+      <a href="#"><i class="fa fa-twitter"></i></a>
+    </div>
+    <div class="col-md-2">
+      <a href="#"><i class="fa fa-youtube"></i></a>
+    </div>
+  </div>
 </body>
 </html>
 
