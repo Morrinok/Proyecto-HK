@@ -61,7 +61,6 @@
                     <div class="cont_over_hidden">
                         <div class="cont_tabs">
                             <ul>
-                                
                                 <li>
                                     <a href="#">
                                         <h4>Preparacion</h4>
@@ -70,7 +69,9 @@
                             </ul>
                         </div>
                         <div class="cont_text_det_preparation">
-
+                            <div class="cont_title_preparation">
+                                <p><?php echo $row['categoria']?></p>
+                            </div>
                             <div class="cont_title_preparation">
                                 <p>Ingredientes</p>
                             </div>
