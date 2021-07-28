@@ -23,13 +23,9 @@
 <body>
     <div class="cont_principal">
         <div class="topnav">
-            <a class="active" href="index.php">Hell's Kitchen</a>
-            <a href="#about">About</a>
+            <a class="active" href="index_remastered.php">Hell's Kitchen</a>
+            <a href="#about">Comparte tu receta</a>
             <div class="search-container">
-              <form action="/action_page.php">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit">Submit</button>
-              </form>
             </div>
         </div>
         <div class="cont_central">
@@ -53,7 +49,7 @@
 
                     <div class="cont_detalles">
                         <h3><?php echo $row['nombre_receta'] ?></h3>
-                        
+                        <p><?php echo $row['categoria']?></p>                        
                     </div>
                 </div>
 
@@ -70,7 +66,6 @@
                         </div>
                         <div class="cont_text_det_preparation">
                             <div class="cont_title_preparation">
-                                <p><?php echo $row['categoria']?></p>
                             </div>
                             <div class="cont_title_preparation">
                                 <p>Ingredientes</p>

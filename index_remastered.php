@@ -74,6 +74,7 @@
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()){
               ?>
+              <a href="ver_r_2.php?id=<?php echo $row['nombre_receta']?>">
               <li class="list-group-item"><?php echo $row['nombre_receta']?></li> <!-- Aquí van los items de recetas mejor puntuadas -->
               <?php }
               ?>
@@ -87,7 +88,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title text-center">
-              <a data-toggle="collapse" href="#collapse2">Recetas mas difíciles</a>
+              <a data-toggle="collapse" href="#collapse2">Recetas más difíciles</a>
             </h4>
           </div>
           <div id="collapse2" class="panel-collapse collapse">
@@ -97,6 +98,7 @@
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()){
               ?>
+              <a href="ver_r_2.php?id=<?php echo $row['nombre_receta']?>">
               <li class="list-group-item"><?php echo $row['nombre_receta']?></li> <!-- Aquí van las recetas más difíciles -->
               <?php }
               ?>
