@@ -53,7 +53,7 @@
 
                     <div class="cont_detalles">
                         <h3><?php echo $row['nombre_receta'] ?></h3>
-                        
+                        <p><?php echo $row['categoria']?></p>                        
                     </div>
                 </div>
 
@@ -70,7 +70,6 @@
                         </div>
                         <div class="cont_text_det_preparation">
                             <div class="cont_title_preparation">
-                                <p><?php echo $row['categoria']?></p>
                             </div>
                             <div class="cont_title_preparation">
                                 <p>Ingredientes</p>
