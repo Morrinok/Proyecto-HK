@@ -7,30 +7,115 @@
         if($result->num_rows > 0){
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Hell's Kitchen</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Hell's Kitchen</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Inicio</a></li>
+          <li><a href="#">Crear</a></li>
+          <li><a href="#">Modificar</a></li>
+          <li><a href="#">Eliminar</a></li>
+        </ul>
+      </div>
+  </nav>
+  <div class="container">
+    <!-- Sección con las categorías -->
+    <div class="row" style="background-color: yellow;">
+      <h1 class="text-center"> Recetas </h1>
+      <?php while($row = $result->fetch_assoc()){
+      ?>
+      <div class="col-sm-2">
+        <div class="thumbnail text-center">
+          <a href="ver_r.php  id="<?php $row['nombre_receta']?>">
+            <img style="width: 160px; height: 90px;" src="<?php echo $row['imagen'] ?>" alt="<?php echo $row['nombre_receta'] ?>">
+            <div class="caption"><?php echo $row['nombre_receta'] ?></div>
+          </a>
+        </div>
+      </div>
+      <?php } 
+      
+      ?>
+    </div>
+  </div>
+  <!-- Sección de espacio blanco 2 -->
+  <div style="height: 40px;"></div>
+  <!-- Sección con los dos menú verticales -->
+  <div class="container" >
+    <div class="col-sm-6">
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title text-center">
+              <a data-toggle="collapse" href="#collapse1" >Recetas más preparadas</a>
+            </h4>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse">
+            <ul class="list-group">
+              <li class="list-group-item">Porotos a la chilena</li>
+              <li class="list-group-item">Arroz a la cubana</li>
+              <li class="list-group-item">Papa a la huancaína</li>
+            </ul>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="col-sm-6">
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title text-center">
+              <a data-toggle="collapse" href="#collapse2">Recetas esta semana</a>
+            </h4>
+          </div>
+          <div id="collapse2" class="panel-collapse collapse">
+            <ul class="list-group">
+              <li class="list-group-item">Ají de gallina</li>
+              <li class="list-group-item">Ceviche de pulpo</li>
+              <li class="list-group-item">Bistec a lo pobre</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sección de espacio blanco 2 -->
+  <div style="height: 26px;"></div>
+  <!-- Sección receta destacada -->
+  <div class="container" style="background-color: #f4f4f4;">
+    <div class="row" >
+      <div class="col-md-6">
+        <?php
+            $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE destacada = 1";
+            $result = $conn->query($sql);
+            $row = $result->fetch_assoc();             
+        ?>
+        <h3>La receta destacada de esta semana es el plato: </h3>
+        <div class="well text-center">
+          <h2 class="text-center"><?php echo $row['nombre_receta'] ?></h1>
+          <img src="<?php echo $row['imagen'] ?>" class="img-thumbnail" alt="<?php echo $row['nombre_receta'] ?>">
+          <p><?php echo $row['preparacion'] ?></p>
+        </div>      
+      </div>
+    </div>
+  </div>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-  </body>
+</body>
 </html>
+
+<?php 
+        }
+        ?>
