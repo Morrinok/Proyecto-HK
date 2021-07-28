@@ -28,8 +28,8 @@
         </div>
         <ul class="nav navbar-nav">
           <li class="active"><a href="index_remastered.php">Inicio</a></li>
-          <!---
-          <li><a href="#">Crear</a></li>
+          <li><a href="menu.php">Crear</a></li>
+        <!---
           <li><a href="#">Modificar</a></li>
           <li><a href="#">Eliminar</a></li>
         -->
