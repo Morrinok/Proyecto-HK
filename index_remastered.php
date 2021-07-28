@@ -28,16 +28,25 @@
         </div>
         <ul class="nav navbar-nav">
           <li class="active"><a href="index_remastered.php">Inicio</a></li>
+<<<<<<< HEAD
           <!---
           <li><a href="#">Crear</a></li>
+=======
+          <li><a href="menu.php">CRUD</a></li>
+        <!---
+>>>>>>> 5a5d8ddac097e1933fae6fc9cf7f86f698863e78
           <li><a href="#">Modificar</a></li>
           <li><a href="#">Eliminar</a></li>
         -->
         </ul>
       </div>
   </nav>
+<<<<<<< HEAD
 <!-- Sección con las categorías -->
 <div style="height: 80px;"></div>
+=======
+  <br>
+>>>>>>> 5a5d8ddac097e1933fae6fc9cf7f86f698863e78
   <div class="container">
     
     <div class="row" style="background-color: yellow;">
