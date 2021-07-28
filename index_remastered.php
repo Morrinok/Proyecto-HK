@@ -92,6 +92,7 @@
           </div>
           <div id="collapse2" class="panel-collapse collapse">
             <ul class="list-group">
+            <a href="ver_r_2.php?id=<?php echo $row['nombre_receta']?>">
               <?php
                 $sql = "SELECT nombre_receta FROM  hellkitchen.recetas WHERE dificultad = 'difícil'";
                 $result = $conn->query($sql);
