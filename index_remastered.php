@@ -70,13 +70,13 @@
           <div id="collapse1" class="panel-collapse collapse">
             <ul class="list-group">
               <?php
-                $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE 1";
+                $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE categoria = 'postres'";
                 $result = $conn->query($sql);
                 $row = $result->fetch_assoc();
 
                 while($row = $result->fetch_assoc()){
               ?>
-              <li class="list-group-item"><?php echo $row['nombre_receta']?></li>
+              <li class="list-group-item"><?php echo $row['nombre_receta']?></li> <!-- Aquí van los items de recetas más preparadas -->
               <?php }
               ?>
             </ul>
@@ -95,13 +95,13 @@
           <div id="collapse2" class="panel-collapse collapse">
             <ul class="list-group">
               <?php
-                $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE 1";
+                $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE categoria = 'comida peruana'";
                 $result = $conn->query($sql);
                 $row = $result->fetch_assoc();
 
                 while($row = $result->fetch_assoc()){
               ?>
-              <li class="list-group-item"><?php echo $row['nombre_receta']?></li>
+              <li class="list-group-item"><?php echo $row['nombre_receta']?></li> <!-- Aquí van los items de recetas esta semana -->
               <?php }
               ?>
             </ul>
@@ -133,7 +133,7 @@
   <!-- Sección de espacio blanco 2 -->
   <div style="height: 26px;"></div>
   <!-- Pie de página -->
-  <div class="container-fluid text-center" style="background-color: #040404; padding: 10pt; height: 59px;">
+  <div class="container-fluid text-center" style="background-color: #040404; padding: 10pt; ">
     <div class="col-md-6">
       <p style="color:#d4d4d4; font-size: 14pt; ">&copy; 2021 Hell's Kitchen. All rights reserved. Design by Grupo Hell's Kitchen</p>
     </div>
