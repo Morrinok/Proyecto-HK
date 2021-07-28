@@ -66,7 +66,7 @@
     ?>
     <div class="col-sm-2">
       <div class="thumbnail text-center">
-        <a href="ver_r.php  id="<?php $row['nombre_receta']?>">
+        <a href="ver_r.php?id=<?php echo $row['nombre_receta']?>">
           <img class="img-responsive" src="<?php echo $row['imagen'] ?>" alt="<?php echo $row['nombre_receta'] ?>">
           <div class="caption"><?php echo $row['nombre_receta'] ?></div>
         </a>
