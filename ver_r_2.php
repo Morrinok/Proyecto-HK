@@ -23,7 +23,7 @@
 <body>
     <div class="cont_principal">
         <div class="topnav">
-            <a class="active" href="index_remastered.php">Hell's Kitchen</a>
+            <a href="index_remastered.php">Hell's Kitchen</a>
             <a href="#about">CRUD</a>
             <div class="search-container">
             </div>
