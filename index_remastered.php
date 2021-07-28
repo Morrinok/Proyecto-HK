@@ -133,7 +133,7 @@
   <!-- Sección de espacio blanco 2 -->
   <div style="height: 26px;"></div>
   <!-- Pie de página -->
-  <div class="container-fluid text-center" style="background-color: #040404; padding: 10pt; height: 59px;">
+  <div class="container-fluid text-center" style="background-color: #040404; padding: 10pt; ">
     <div class="col-md-6">
       <p style="color:#d4d4d4; font-size: 14pt; ">&copy; 2021 Hell's Kitchen. All rights reserved. Design by Grupo Hell's Kitchen</p>
     </div>
