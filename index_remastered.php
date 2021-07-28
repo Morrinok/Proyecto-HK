@@ -131,6 +131,29 @@
   <!-- Sección de espacio blanco 2 -->
   <div style="height: 26px;"></div>
   <!-- Pie de página -->
+  <div id="footer">
+    <div class="container text-center">
+      <div class="col-md-6">
+        <p>&copy; 2021 Hell's Kitchen. All rights reserved. Design by Grupo Hell's Kitchen</p>
+      </div>
+      <div class="col-md-6">
+        <div class="social">
+          <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+  <script type="text/javascript" src="js/bootstrap.js"></script> 
+  <script type="text/javascript" src="js/SmoothScroll.js"></script> 
+  <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
+  <script type="text/javascript" src="js/contact_me.js"></script> 
+  <script type="text/javascript" src="js/main.js"></script>
+  <!--
   <div class="container-fluid text-center" style="background-color: #040404; padding: 10pt; ">
     <div class="col-md-6">
       <p style="color:#d4d4d4; font-size: 14pt; ">&copy; 2021 Hell's Kitchen. All rights reserved. Design by Grupo Hell's Kitchen</p>
@@ -148,6 +171,7 @@
       <a href="#"><i class="fa fa-youtube" style="color:#d4d4d4; font-size: 13pt;"></i></a>
     </div>
   </div>
+                -->
 </body>
 </html>
 
