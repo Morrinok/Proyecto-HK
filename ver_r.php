@@ -1,21 +1,15 @@
 <?php
     include "conexion.php";
     $id = $_GET['id'];
-    $sql = "SELECT * FROM  hellkitchen.recetas WHERE nombre_receta =" . $id;
+    $sql = "SELECT * FROM  hellkitchen.recetas WHERE nombre_receta = '$id'";
     $result = $conn->query($sql);
-    echo "<br>";
-    if($result->num_rows > 0){
-        $row = $result->fetch_assoc();
-    }else{
-        echo "0 registros";
-    }
-    $conn->close();    
-    $im = $row['imagen'];            
+    $row = $result->fetch_assoc();
+               
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap 4 Website Example</title>
+  <title><?php echo $row['nombre_receta']?></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -24,7 +18,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <style>
   .fakeimg {
-    height: 200px;
+    height: 230px;
     background: #aaa;
   }
   </style>
@@ -53,41 +47,39 @@
 
 <div class="container" style="margin-top:30px">
   <div class="row">
-    <div class="col-sm-4">
-      <h2>About Me</h2>
-      <h5>Photo of me:</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-      <h3>Some Links</h3>
-      <p>Lorem ipsum dolor sit ame.</p>
+    <div class="col-sm-3 border p-3">
+        
+      <h2><?php echo $row['nombre_receta']?></h2>
+      <br>
+      <div class="container"><img class="img-fluid img-thumbnail" src="<?php echo $row['imagen'] ?>" alt="<?php echo $row['nombre_receta'] ?>"></div>
+      <br>
+      <h3>Categoría</h3>
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link active" href="#"><?php echo $row['categoria'] ?></a>
         </li>
       </ul>
       <hr class="d-sm-none">
     </div>
-    <div class="col-sm-8">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      <br>
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <div class="col-sm-9">
+        <div class="container border p-3">
+            <h2>Ingredientes</h2>
+            <div><?php echo $row['ingredientes']?></div>
+        </div>
+        <br>
+        <div class="container border p-3">
+            <h2>Preparación: </h2>
+            <div><?php echo $row['preparacion']?></div>
+        </div>
+        <br>
+        <div class="container border p-3">
+            <h2>Calificación: </h2>
+            <div>
+            <?php 
+                
+            ?>
+            </div>
+        </div>
     </div>
   </div>
 </div>
