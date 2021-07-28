@@ -48,6 +48,7 @@
             <img style="width: 160px; height: 90px;" src="<?php echo $row['imagen'] ?>" alt="<?php echo $row['nombre_receta'] ?>">
             <div class="caption"><?php echo $row['nombre_receta'] ?></div>
           </a>
+          
         </div>
       </div>
       <?php } 
