@@ -12,5 +12,6 @@
 ?>
 <?php
     include "conexion.php";
-    
+    header("location: menu.php");
+    exit; 
 ?>
