@@ -51,28 +51,27 @@
       ?>
     </div>
   </div>
-<!-- 
-  <div class="container-fluid">
-      -->
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="panel-group">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title text-center">
-                <a data-toggle="collapse" href="#collapse1" >Recetas más preparadas</a>
-              </h4>
-            </div>
-            <div id="collapse1" class="panel-collapse collapse">
-              <ul class="list-group">
-                <li class="list-group-item">Porotos a la chilena</li>
-                <li class="list-group-item">Arroz a la cubana</li>
-                <li class="list-group-item">Papa a la huancaína</li>
-              </ul>
-            </div>
+  <!-- Sección de espacio blanco 2 -->
+  <div style="height: 40px;"></div>
+  <!-- Sección con los dos menú verticales -->
+  <div class="container" >
+    <div class="col-sm-6">
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title text-center">
+              <a data-toggle="collapse" href="#collapse1" >Recetas más preparadas</a>
+            </h4>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse">
+            <ul class="list-group">
+              <li class="list-group-item">Porotos a la chilena</li>
+              <li class="list-group-item">Arroz a la cubana</li>
+              <li class="list-group-item">Papa a la huancaína</li>
+            </ul>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
     <div class="col-sm-6">
       <div class="panel-group">
@@ -92,9 +91,27 @@
         </div>
       </div>
     </div>
-    <!--
   </div>
-      -->
+  <!-- Sección de espacio blanco 2 -->
+  <div style="height: 26px;"></div>
+  <!-- Sección receta destacada -->
+  <div class="container" style="background-color: #f4f4f4;">
+    <div class="row" >
+      <div class="col-md-6">
+        <?php
+            $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE destacada = 1";
+            $result = $conn->query($sql);
+            $row = $result->fetch_assoc();             
+        ?>
+        <h3>La receta destacada de esta semana es el plato: </h3>
+        <div class="well text-center">
+          <h2 class="text-center"><?php echo $row['nombre_receta'] ?></h1>
+          <img src="<?php echo $row['imagen'] ?>" class="img-thumbnail" alt="<?php echo $row['nombre_receta'] ?>">
+          <p><?php echo $row['preparacion'] ?></p>
+        </div>      
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
