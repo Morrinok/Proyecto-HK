@@ -44,7 +44,7 @@
       ?>
       <div class="col-sm-2">
         <div class="thumbnail text-center">
-          <a href="ver_r_2.php?id=<?php $row['nombre_receta']?>">
+          <a href="ver_r_2.php?id=<?php echo $row['nombre_receta']?>">
             <img style="width: 160px; height: 90px;" class="img-responsive" src="<?php echo $row['imagen'] ?>" alt="<?php echo $row['nombre_receta'] ?>">
             <div class="caption"><?php echo $row['nombre_receta'] ?></div>
           </a>
@@ -52,7 +52,6 @@
         </div>
       </div>
       <?php } 
-      
       ?>
     </div>
   </div>
@@ -65,19 +64,17 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title text-center">
-              <a data-toggle="collapse" href="#collapse1" >Recetas más preparadas</a>
+              <a data-toggle="collapse" href="#collapse1" >Recetas mejor puntuadas</a>
             </h4>
           </div>
           <div id="collapse1" class="panel-collapse collapse">
             <ul class="list-group">
               <?php
-                $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE categoria = 'postres'";
+                $sql = "SELECT nombre_receta FROM  hellkitchen.recetas WHERE valoracion = 5";
                 $result = $conn->query($sql);
-                $row = $result->fetch_assoc();
-
                 while($row = $result->fetch_assoc()){
               ?>
-              <li class="list-group-item"><?php echo $row['nombre_receta']?></li> <!-- Aquí van los items de recetas más preparadas -->
+              <li class="list-group-item"><?php echo $row['nombre_receta']?></li> <!-- Aquí van los items de recetas mejor puntuadas -->
               <?php }
               ?>
             </ul>
@@ -90,19 +87,17 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title text-center">
-              <a data-toggle="collapse" href="#collapse2">Recetas esta semana</a>
+              <a data-toggle="collapse" href="#collapse2">Recetas mas difíciles</a>
             </h4>
           </div>
           <div id="collapse2" class="panel-collapse collapse">
             <ul class="list-group">
               <?php
-                $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE categoria = 'comida peruana'";
+                $sql = "SELECT nombre_receta FROM  hellkitchen.recetas WHERE dificultad = 'difícil'";
                 $result = $conn->query($sql);
-                $row = $result->fetch_assoc();
-
                 while($row = $result->fetch_assoc()){
               ?>
-              <li class="list-group-item"><?php echo $row['nombre_receta']?></li> <!-- Aquí van los items de recetas esta semana -->
+              <li class="list-group-item"><?php echo $row['nombre_receta']?></li> <!-- Aquí van las recetas más difíciles -->
               <?php }
               ?>
             </ul>
