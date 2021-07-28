@@ -21,7 +21,7 @@
 </head>
 <body>
   <!-- Barra de navegación -->
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">Hell's Kitchen</a>
@@ -44,7 +44,7 @@
       ?>
       <div class="col-sm-2">
         <div class="thumbnail text-center">
-          <a href="ver_r_2.php?id=<?php echo $row['nombre_receta']?>">
+          <a href="ver_r_2.php?id=<?php $row['nombre_receta']?>">
             <img style="width: 160px; height: 90px;" class="img-responsive" src="<?php echo $row['imagen'] ?>" alt="<?php echo $row['nombre_receta'] ?>">
             <div class="caption"><?php echo $row['nombre_receta'] ?></div>
           </a>
@@ -116,17 +116,17 @@
   <!-- Sección receta destacada -->
   <div class="container" style="background-color: #f4f4f4;">
     <div class="row" >
-      <div class="col-md-6">
+      <div class="col-md-12">
         <?php
             $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE destacada = 1";
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();             
         ?>
         <h3>La receta destacada de esta semana es el plato: </h3>
-        <div class="well text-center">
+        <div class="well text-center"> 
+        <a href="ver_r_2.php?id=<?php echo $row['nombre_receta']?>">
           <h2 class="text-center"><?php echo $row['nombre_receta'] ?></h1>
           <img src="<?php echo $row['imagen'] ?>" class="img-thumbnail" alt="<?php echo $row['nombre_receta'] ?>">
-          <p><?php echo $row['preparacion'] ?></p>
         </div>      
       </div>
     </div>
