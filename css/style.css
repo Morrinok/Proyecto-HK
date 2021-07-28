@@ -6,6 +6,11 @@ body, html {
 	font-weight: 400;
 	width: 100% !important;
 	height: 100% !important;
+	background: rgb(251, 250, 246);
+	background: -moz-linear-gradient(-45deg, rgba(251, 250, 246, 1) 9%, rgba(212, 206, 191, 1) 74%, rgba(212, 206, 191, 1) 74%, rgba(212, 206, 191, 1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(251, 250, 246, 1) 9%, rgba(212, 206, 191, 1) 74%, rgba(212, 206, 191, 1) 74%, rgba(212, 206, 191, 1) 100%);
+    background: linear-gradient(135deg, rgba(251, 250, 246, 1) 9%, rgba(212, 206, 191, 1) 74%, rgba(212, 206, 191, 1) 74%, rgba(212, 206, 191, 1) 100%);
+
 }
 h1, h2, h3, h4 {
 	font-family: 'Raleway', sans-serif;
