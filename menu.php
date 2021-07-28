@@ -20,33 +20,33 @@
         <thead>
         <tr>
             <th>#</th>
-            <th>Id</th>
-            <th>Nombre</th>
+            <th>Categoria</th>
+            <th>Nombre de la Receta</th>
             <th>Accion</th>
             <td> 
         </thead>
         <tbody>
         <?php
         include "conexion.php";
-
-        $sql = "SELECT id, nombre, precio, imagen, categoria, descripcion FROM  lab4.objetos";
+        
+        $sql = "SELECT * FROM  hellkitchen.recetas";
         $result = $conn->query($sql);
-        echo "<br>";
         
         if($result->num_rows > 0){
 
             $x = 0;
             while($row = $result->fetch_assoc()){
-                
-                echo "<tr>";
-                    echo "<td>"; echo $x; echo "</td>";
-                    echo "<td>"; echo $row['id']; echo "</td>";
-                    echo "<td>"; echo $row['nombre']; echo "</td>";
-                    echo "<td><a href='ver_p.php ?id=".$row['id']."'><button type='button' class='btn btn-primary' href='ver_p.php'>Ver</button></a>";
-                    echo " <a href='eliminar_p.php ?id=".$row['id']."'><button type='button' class='btn btn-danger'>Eliminar</button></a>";
-                    echo " <a href='modificar_p.php ?id=".$row['id']."'><button type='button' class='btn btn-info'>Editar</button></a></td>";
-                    
-                echo "</tr>"; 
+        ?>    
+        <tr>
+            <td><?php echo $x ?></td>
+            <td><?php echo $row['categoria'] ?></td>
+            <td><?php echo $row['nombre_receta'] ?></td>
+            <td>
+                <a href="eliminar.php?id=<?php echo $row['nombre_receta']?>"><button type='button' class='btn btn-danger'>Eliminar</button></a>
+                <a href="modificar_p.php?id=<?php echo $row['nombre_receta']?>"><button type='button' class='btn btn-info'>Editar</button></a>
+            </td>
+        </tr>
+        <?php    
                 $x+=1;
             } 
 
