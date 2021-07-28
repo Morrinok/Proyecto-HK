@@ -16,6 +16,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <style>
   .fakeimg {
     height: 230px;
@@ -73,13 +74,18 @@
         </div>
         <br>
         <div class="container border p-3">
-            <h2>Calificación: </h2>
+            <h2>Valoracion: </h2>
             <div>
-            <?php 
-                
+            <?php
+            for ($i = 1; $i <= $row['valoracion']; $i++) {
+            ?>    
+            <i class="fas fa-heart"></i>
+            <?php
+            }    
             ?>
             </div>
         </div>
+        <br>
     </div>
   </div>
 </div>
