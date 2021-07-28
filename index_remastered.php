@@ -18,25 +18,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- Favicons
-    ================================================== -->
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-
-  <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-  <!-- Stylesheet
-      ================================================== -->
-  <link rel="stylesheet" type="text/css"  href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
 </head>
 <body>
   <!-- Barra de navegación -->
@@ -47,16 +28,18 @@
         </div>
         <ul class="nav navbar-nav">
           <li class="active"><a href="index_remastered.php">Inicio</a></li>
-          <li><a href="menu.php">Crear</a></li>
-        <!---
+          <!---
+          <li><a href="#">Crear</a></li>
           <li><a href="#">Modificar</a></li>
           <li><a href="#">Eliminar</a></li>
         -->
         </ul>
       </div>
   </nav>
+<!-- Sección con las categorías -->
+<div style="height: 80px;"></div>
   <div class="container">
-    <!-- Sección con las categorías -->
+    
     <div class="row" style="background-color: yellow;">
       <h1 class="text-center"> Recetas </h1>
       <?php while($row = $result->fetch_assoc()){
@@ -93,11 +76,11 @@
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()){
               ?>
-              <a href="ver_r_2.php?id=<?php echo $row['nombre_receta']?>">
+              
               <li class="list-group-item"><?php echo $row['nombre_receta']?></li> <!-- Aquí van los items de recetas mejor puntuadas -->
+              
               <?php }
               ?>
-              </a>
             </ul>
           </div>
         </div>
@@ -108,7 +91,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title text-center">
-              <a data-toggle="collapse" href="#collapse2">Recetas más difíciles</a>
+              <a data-toggle="collapse" href="#collapse2">Recetas mas difíciles</a>
             </h4>
           </div>
           <div id="collapse2" class="panel-collapse collapse">
@@ -122,7 +105,6 @@
               <li class="list-group-item"><?php echo $row['nombre_receta']?></li> <!-- Aquí van las recetas más difíciles -->
               <?php }
               ?>
-              </a>
             </ul>
           </div>
         </div>
@@ -152,29 +134,6 @@
   <!-- Sección de espacio blanco 2 -->
   <div style="height: 26px;"></div>
   <!-- Pie de página -->
-  <div id="footer">
-    <div class="container text-center">
-      <div class="col-md-6">
-        <p>&copy; 2021 Hell's Kitchen. All rights reserved. Design by Grupo Hell's Kitchen</p>
-      </div>
-      <div class="col-md-6">
-        <div class="social">
-          <ul>
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
-  <script type="text/javascript" src="js/bootstrap.js"></script> 
-  <script type="text/javascript" src="js/SmoothScroll.js"></script> 
-  <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
-  <script type="text/javascript" src="js/contact_me.js"></script> 
-  <script type="text/javascript" src="js/main.js"></script>
-  <!--
   <div class="container-fluid text-center" style="background-color: #040404; padding: 10pt; ">
     <div class="col-md-6">
       <p style="color:#d4d4d4; font-size: 14pt; ">&copy; 2021 Hell's Kitchen. All rights reserved. Design by Grupo Hell's Kitchen</p>
@@ -192,7 +151,6 @@
       <a href="#"><i class="fa fa-youtube" style="color:#d4d4d4; font-size: 13pt;"></i></a>
     </div>
   </div>
-                -->
 </body>
 </html>
 
