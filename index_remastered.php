@@ -70,13 +70,13 @@
           <div id="collapse1" class="panel-collapse collapse">
             <ul class="list-group">
               <?php
-                $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE 1";
+                $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE categoria = 'postres'";
                 $result = $conn->query($sql);
                 $row = $result->fetch_assoc();
 
                 while($row = $result->fetch_assoc()){
               ?>
-              <li class="list-group-item"><?php echo $row['nombre_receta']?></li>
+              <li class="list-group-item"><?php echo $row['nombre_receta']?></li> <!-- Aquí van los items de recetas más preparadas -->
               <?php }
               ?>
             </ul>
@@ -95,13 +95,13 @@
           <div id="collapse2" class="panel-collapse collapse">
             <ul class="list-group">
               <?php
-                $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE 1";
+                $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE categoria = 'comida peruana'";
                 $result = $conn->query($sql);
                 $row = $result->fetch_assoc();
 
                 while($row = $result->fetch_assoc()){
               ?>
-              <li class="list-group-item"><?php echo $row['nombre_receta']?></li>
+              <li class="list-group-item"><?php echo $row['nombre_receta']?></li> <!-- Aquí van los items de recetas esta semana -->
               <?php }
               ?>
             </ul>
