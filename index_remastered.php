@@ -27,10 +27,12 @@
           <a class="navbar-brand" href="#">Hell's Kitchen</a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Inicio</a></li>
+          <li class="active"><a href="index_remastered.php">Inicio</a></li>
+          <!---
           <li><a href="#">Crear</a></li>
           <li><a href="#">Modificar</a></li>
           <li><a href="#">Eliminar</a></li>
+        -->
         </ul>
       </div>
   </nav>
@@ -67,9 +69,16 @@
           </div>
           <div id="collapse1" class="panel-collapse collapse">
             <ul class="list-group">
-              <li class="list-group-item">Porotos a la chilena</li>
-              <li class="list-group-item">Arroz a la cubana</li>
-              <li class="list-group-item">Papa a la huancaína</li>
+              <?php
+                $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE 1";
+                $result = $conn->query($sql);
+                $row = $result->fetch_assoc();
+
+                while($row = $result->fetch_assoc()){
+              ?>
+              <li class="list-group-item"><?php echo $row['nombre_receta']?></li>
+              <?php }
+              ?>
             </ul>
           </div>
         </div>
@@ -85,9 +94,16 @@
           </div>
           <div id="collapse2" class="panel-collapse collapse">
             <ul class="list-group">
-              <li class="list-group-item">Ají de gallina</li>
-              <li class="list-group-item">Ceviche de pulpo</li>
-              <li class="list-group-item">Bistec a lo pobre</li>
+              <?php
+                $sql = "SELECT nombre_receta, imagen, preparacion FROM  hellkitchen.recetas WHERE 1";
+                $result = $conn->query($sql);
+                $row = $result->fetch_assoc();
+
+                while($row = $result->fetch_assoc()){
+              ?>
+              <li class="list-group-item"><?php echo $row['nombre_receta']?></li>
+              <?php }
+              ?>
             </ul>
           </div>
         </div>
