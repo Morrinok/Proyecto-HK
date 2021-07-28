@@ -1,7 +1,7 @@
 <?php
      include "conexion.php";
      $id = $_GET['id'];
-     $sql = "DELETE FROM lab4.objetos WHERE id =" . $id;
+     $sql = "DELETE FROM hellkitchen.recetas WHERE nombre_receta = '$id'";
      if($conn->query($sql) === TRUE){
 
     }else{
@@ -9,4 +9,8 @@
     }
     
     $conn->close();    
+?>
+<?php
+    include "conexion.php";
+    
 ?>
