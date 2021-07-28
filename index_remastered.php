@@ -18,6 +18,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <!-- Barra de navegación -->
   <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -25,15 +26,30 @@
         </div>
         <ul class="nav navbar-nav">
           <li class="active"><a href="#">Inicio</a></li>
-          <li><a href="#">Page 1</a></li>
-          <li><a href="#">Page 2</a></li>
-          <li><a href="#">Page 3</a></li>
+          <li><a href="#">Crear</a></li>
+          <li><a href="#">Modificar</a></li>
+          <li><a href="#">Eliminar</a></li>
         </ul>
       </div>
   </nav>
   <div class="container">
-    <h1>My First Bootstrap Page</h1>
-    <p>This is some text.</p>
+    <!-- Sección con las categorías -->
+    <div class="row">
+      <h1 class="text-center"> Recetas </h1>
+      <?php while($row = $result->fetch_assoc()){
+      ?>
+      <div class="col-sm-2">
+        <div class="thumbnail text-center">
+          <a href="ver_r.php  id="<?php $row['nombre_receta']?>">
+            <img class="img-responsive" src="<?php echo $row['imagen'] ?>" alt="<?php echo $row['nombre_receta'] ?>">
+            <div class="caption"><?php echo $row['nombre_receta'] ?></div>
+          </a>
+        </div>
+      </div>
+      <?php } }
+      
+      ?>
+    </div>
   </div>
 
 </body>
