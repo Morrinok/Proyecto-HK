@@ -14,9 +14,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <!-- Barra de navegación -->
@@ -116,18 +117,21 @@
   <!-- Sección de espacio blanco 2 -->
   <div style="height: 26px;"></div>
   <!-- Pie de página -->
-  <div class="container-fluid text-center" style="background-color: #f4f4f4;">
+  <div class="container-fluid text-center" style="background-color: #040404; padding: 10pt; height: 59px;">
     <div class="col-md-6">
-      <p>&copy; 2021 Hell's Kitchen. All rights reserved. Design by Grupo Hell's Kitchen</p>
+      <p style="color:#d4d4d4; font-size: 14pt; ">&copy; 2021 Hell's Kitchen. All rights reserved. Design by Grupo Hell's Kitchen</p>
     </div>
-    <div class="col-md-2">
-      <a href="#"><i class="fa fa-facebook"></i></a>
+    <div class="col-md-3">
+      <p> </p>
     </div>
-    <div class="col-md-2">
-      <a href="#"><i class="fa fa-twitter"></i></a>
+    <div class="col-md-1">
+      <a href="#"><i class="fa fa-facebook" style="color:#d4d4d4; font-size: 13pt;"></i></a>
     </div>
-    <div class="col-md-2">
-      <a href="#"><i class="fa fa-youtube"></i></a>
+    <div class="col-md-1">
+      <a href="#"><i class="fa fa-twitter" style="color:#d4d4d4; font-size: 13pt;"></i></a>
+    </div>
+    <div class="col-md-1">
+      <a href="#"><i class="fa fa-youtube" style="color:#d4d4d4; font-size: 13pt;"></i></a>
     </div>
   </div>
 </body>
