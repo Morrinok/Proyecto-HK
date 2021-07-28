@@ -1,3 +1,17 @@
+<?php
+    include "conexion.php";
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM  hellkitchen.recetas WHERE nombre_receta =" . $id;
+    $result = $conn->query($sql);
+    echo "<br>";
+    if($result->num_rows > 0){
+        $row = $result->fetch_assoc();
+    }else{
+        echo "0 registros";
+    }
+    $conn->close();    
+    $im = $row['imagen'];            
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +32,7 @@
 <body>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">Hell's Kitchen</a>
+  <a class="navbar-brand" href="index.php">Hell's Kitchen</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
