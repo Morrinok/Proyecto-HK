@@ -1,3 +1,12 @@
+<?php
+        include "conexion.php";
+
+        $sql = "SELECT * FROM  hellkitchen.recetas";
+        $result = $conn->query($sql);
+        
+        if($result->num_rows > 0){
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
