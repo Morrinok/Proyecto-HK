@@ -75,7 +75,7 @@
                                 <p>Ingredientes</p>
                             </div>
                             <div class="cont_info_preparation">
-                                <p>Ingrediente 1, Ingrediente 2, Ingrediente 3, Ingrediente 4.</p>
+                                
                                 <p><?php echo $row['ingredientes']?></p>
                             </div>
                             <div class="cont_title_preparation">
