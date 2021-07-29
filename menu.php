@@ -42,8 +42,8 @@
             <td><?php echo $row['categoria'] ?></td>
             <td><?php echo $row['nombre_receta'] ?></td>
             <td>
-                <a href="eliminar_p.php?id=<?php echo $row['nombre_receta']?>"><button type='button' class='btn btn-danger'>Eliminar</button></a>
-                <a href="modificar_p.php?id=<?php echo $row['nombre_receta']?>"><button type='button' class='btn btn-info'>Editar</button></a>
+                <a href="eliminar_r.php?id=<?php echo $row['nombre_receta']?>"><button type='button' class='btn btn-danger'>Eliminar</button></a>
+                <a href="modificar_r.php?id=<?php echo $row['nombre_receta']?>"><button type='button' class='btn btn-info'>Editar</button></a>
             </td>
         </tr>
         <?php    
