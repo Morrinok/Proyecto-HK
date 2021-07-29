@@ -37,19 +37,42 @@
           </div>
           <div class="form-group">
             <label>Valoracion:</label>
-            <input type="text" class="form-control" name="valoracion" placeholder="Valoracion">
+            <select name="valoracion" class="custom-select">
+                <option selected><?php echo $row['valoracion'];?></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <!--<input type="text" class="form-control" name="valoracion" placeholder="Valoracion">!-->
           </div>
           <div class="form-group">
             <label>Dificultad: [Fácil, Normal, Difícil]</label>
-            <input type="text" class="form-control" name="dificultad" placeholder="Dificultad">
+            <select name="dificultad" class="custom-select">
+                <option selected><?php echo $row['dificultad'];?></option>
+                <option value="Fácil">Fácil</option>
+                <option value="Normal">Normal</option>
+                <option value="Dificíl">Dificil</option>
+            </select>
+            <!--<input type="text" class="form-control" name="dificultad" placeholder="Dificultad">!-->
           </div>
           <div class="form-group">
             <label>Destacada: [Si = 1 , No = 0]</label>
-            <input type="text" class="form-control" name="destacada" placeholder="Destacada?">
+            <select name="destacada" class="custom-select">
+                <option selected><?php echo $row['destacada'];?></option>
+                <option value="1">Si</option>
+                <option value="0">No</option>
+            </select>
+            <!--<input type="text" class="form-control" name="destacada" placeholder="Destacada?"> !-->
           </div>
           <div class="form-group">
             <label>Mas Preparada: [Si = 1 , No = 0]</label>
-            <input type="text" class="form-control" name="mas_preparada" placeholder="Mas Preparada?">
+            <select name="mas_preparada" class="custom-select">
+                <option value="1">Si</option>
+                <option value="0">No</option>
+            </select>
+            <!--<input type="text" class="form-control" name="mas_preparada" placeholder="Mas Preparada?"> !-->
           </div>
           <button type="submit" class="btn btn-primary">Ingresar Nueva Receta</button>
         </form>

@@ -44,19 +44,43 @@
           </div>
           <div class="form-group">
             <label>Valoracion:</label>
-            <input type="text" class="form-control" name="valoracion" value="<?php echo $row['valoracion'];?>">
+            <select name="valoracion" class="custom-select">
+              <option selected><?php echo $row['valoracion'];?></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <!--<input type="text" class="form-control" name="valoracion" value="<?php echo $row['valoracion'];?>"> !-->
           </div>
           <div class="form-group">
-            <label>Dificultad: [Fácil, Normal, Difícil]</label>
-            <input type="text" class="form-control" name="dificultad" value="<?php echo $row['dificultad'];?>">
+            <label>Dificultad: </label>
+            <select name="dificultad" class="custom-select">
+              <option selected><?php echo $row['dificultad'];?></option>
+              <option value="Fácil">Fácil</option>
+              <option value="Normal">Normal</option>
+              <option value="Dificíl">Dificil</option>
+            </select>
+            <!--<input type="text" class="form-control" name="dificultad" value="<?php echo $row['dificultad'];?>"> !-->
           </div>
           <div class="form-group">
             <label>Destacada: [Si = 1 , No = 0]</label>
-            <input type="text" class="form-control" name="destacada" value="<?php echo $row['destacada'];?>">
+            <select name="destacada" class="custom-select">
+              <option selected><?php echo $row['destacada'];?></option>
+              <option value="1">Si</option>
+              <option value="0">No</option>
+            </select>
+            <!--<input type="text" class="form-control" name="destacada" value="<?php echo $row['destacada'];?>"> !-->
           </div>
           <div class="form-group">
             <label>Mas Preparada: [Si = 1 , No = 0]</label>
-            <input type="text" class="form-control" name="mas_preparada" value="<?php echo $row['mas_preparada'];?>">
+            <select name="mas_preparada" class="custom-select">
+              <option selected><?php echo $row['mas_preparada'];?></option>
+              <option value="1">Si</option>
+              <option value="0">No</option>
+            </select>
+            <!--<input type="text" class="form-control" name="mas_preparada" value="<?php echo $row['mas_preparada'];?>"> !-->
           </div>
           <button type="submit" class="btn btn-primary">Actualizar</button>
         </form>
