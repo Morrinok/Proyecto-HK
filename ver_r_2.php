@@ -25,7 +25,7 @@
     <div class="cont_principal">
         <div class="topnav">
             <a href="index_remastered.php">Hell's Kitchen</a>
-            <a href="#about">CRUD</a>
+            <a href="menu.php">CRUD</a>
             <div class="search-container">
             </div>
         </div>
