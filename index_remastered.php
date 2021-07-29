@@ -147,7 +147,7 @@ background: radial-gradient(circle, rgba(228,178,97,1) 20%, rgba(237,229,97,1) 7
         ?>
         <h3>La receta destacada de esta semana es el plato: </h3>
         <div class="well text-center"> 
-        <a href="ver_r_2.php?id=<?php echo $row['nombre_receta']?>">
+        <a href="ver_r_2.php?id=<?php echo $row['nombre_receta']?>"></a>
           <h2 class="text-center"><?php echo $row['nombre_receta'] ?></h1>
           <img src="<?php echo $row['imagen'] ?>" class="img-thumbnail" alt="<?php echo $row['nombre_receta'] ?>">
         </div>      
