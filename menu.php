@@ -14,7 +14,8 @@
 <div class="container">
     <br>
     <div class="container">
-        <a href='formulario.html'><button type='button' class='btn btn-info'>Nuevo</button></a>
+        <a href='index_remastered.php'><button type='button' class='btn btn-primary'>Pagina Hell's Kitchen</button></a>
+        <a href='nueva_r.html'><button type='button' class='btn btn-info'>Nuevo</button></a>
     </div>
     <table class="table table-hover">
         <thead>
