@@ -60,14 +60,16 @@
   <div class="container">
     <!-- Sección con las categorías -->
     <div style="height: 80px;"></div>
-    <div class="row" style="background-color: yellow;">
-      <h1 class="text-center"> Recetas </h1>
+    <div class="row" style="border-radius: 5px; background: rgb(228,178,97);
+background: radial-gradient(circle, rgba(228,178,97,1) 20%, rgba(237,229,97,1) 75%, rgba(227,220,99,1) 100%);">
+      <h1 class="text-center" style="color:white;"> Recetas </h1>
       <?php while($row = $result->fetch_assoc()){
       ?>
       <div class="col-sm-2">
-        <div class="thumbnail text-center">
+        <div class="thumbnail text-center" style="background: white; box-shadow: 1px 1px 20px -5px rgba(0, 0, 0, 0.5);
+">
           <a href="ver_r_2.php?id=<?php echo $row['nombre_receta']?>">
-            <img style="width: 160px; height: 90px;" class="img-responsive" src="<?php echo $row['imagen'] ?>" alt="<?php echo $row['nombre_receta'] ?>">
+            <img style="width: 160px; height: 90px;display: flex; margin: auto; justify-content: space-around; object-fit: cover;" class="img-responsive" src="<?php echo $row['imagen'] ?>" alt="<?php echo $row['nombre_receta'] ?>">
             <div class="caption"><?php echo $row['nombre_receta'] ?></div>
           </a>
           
