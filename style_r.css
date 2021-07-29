@@ -10,17 +10,19 @@ body {
   
   .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #222;
   }
   
   .topnav a {
+    font-family: 'Open Sans', serif;
     float: left;
     display: block;
     color: #9d9d9d;
     text-align: center;
+    line-height: 20px;
     padding: 15px 15px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
   }
   
   .topnav a:hover {
